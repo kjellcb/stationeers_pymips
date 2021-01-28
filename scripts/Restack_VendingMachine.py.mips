@@ -1,0 +1,25 @@
+alias vMachine d0
+alias vmStacker d1
+alias vmSorter d2
+alias btn d3
+alias display d4
+move r0 200
+move r1 0
+j 24
+bne 1 0 10
+j 25
+j 20
+sle r2 r0 102
+bne r2 0 14
+j 21
+ls r2 d0 r0 PrefabHash
+bne r2 -12341234 19 
+ls r4 d0 r0 Quantity
+add r1 r1 r4
+s d4 Setting r1
+add r0 r0 1
+j 11
+l r2 d3 Setting
+bne r2 1 24 
+move r0 3
+j 8
